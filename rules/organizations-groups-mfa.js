@@ -8,7 +8,7 @@ function (user, context, callback) {
   var groups = user.app_metadata.authorization.groups;
 
   // check if user belong to any group acitve in Authorization Extension
-  var needsMFA = !!groups.length > 0;
+  var needsMFA = groups && groups.length > 0;
 
   if (needsMFA){
     context.multifactor = {
