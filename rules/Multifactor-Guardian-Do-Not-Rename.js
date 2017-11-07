@@ -6,7 +6,7 @@ function (user, context, callback) {
   var CLIENTS_WITHOUT_MFA = ['NVhNbvUy38qQAZyVw1ZoYtMdHDJv3QSg'];
 
   // run only if client has enabled mfa
-  if (CLIENTS_WITHOUT_MFA.indexOf(context.clientID) === -1) {
+  if (CLIENTS_WITHOUT_MFA.indexOf(context.clientID) === -1 || USERS_WITHOUT_MFA.indexOf(user.user_id) === -1) {
     if (!user.app_metadata || !user.app_metadata.authorization ||
       !Array.isArray(user.app_metadata.authorization.groups)) {
       return callback(null, user, context);
