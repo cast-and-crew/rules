@@ -1,7 +1,7 @@
 function (user, context, callback) {
 
   // whitelist of users which never use mfa - justin@parhelium.pl
-  var USERS_WITHOUT_MFA = ['5935bb343dc3ba3329dd1fbb', '59faf2efd9c0c536bf4c2508', '59faff32d1f459141120579a'];
+  var USERS_WITHOUT_MFA = ['auth0|5935bb343dc3ba3329dd1fbb', 'auth0|59faf2efd9c0c536bf4c2508', 'auth0|59faff32d1f459141120579a'];
   // whitelist of clients which never use mfa - for iOS
   var CLIENTS_WITHOUT_MFA = ['NVhNbvUy38qQAZyVw1ZoYtMdHDJv3QSg'];
 
